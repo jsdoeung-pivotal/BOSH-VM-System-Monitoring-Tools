@@ -12,5 +12,16 @@ Here’s how to understand this output:
 + CPU usage: The %CPU column will give you the percentage of CPU each process is using. The %MEM column will give you the percentage of memory being used by each process.
 + Memory usage: KiB Mem and KiB Swap lines will give you the total memory and swap space on your system along with the amount of free, used, and cached memory.
 + Process list: PID, USER, PR, NI, VIRT, RES, SHR, S, %CPU, %MEM, TIME+, and COMMAND columns will give you the info. on each process on your system. 
-  + d
+  + PID = process ID
+  + USER = username of the process owner
+  + PR = process priority
+  + NI = nice value
+  + VIRT = total virtual memory being used
+  + RES = resident set size (basically, the amount of physical memory being used)
+  + SHR = shared memory size
+  + S = Status of the process i.e. running, sleeping, stopped, etc.
+  + %CPU = percentage of CPU usage for each process
+  + %MEM = percentage of memory usage for each process
+  + TIME+ = total CPU time for each process
+  + COMMAND = name of process
 
