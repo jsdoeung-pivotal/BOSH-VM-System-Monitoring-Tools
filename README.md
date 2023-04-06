@@ -4,4 +4,4 @@
   <source src="https://drive.google.com/file/d/1Dhy8b9ZdTJbhdV9gYC-TUCJbS-156aZb/view?usp=share_link" type="VIDEO_TYPE">
 </video>
 
-![Alt text](imgs/top.png)
+![Alt text](img/top.png)
