@@ -4,3 +4,4 @@ BOSH Director is a very resource-intensive application. We need to ensure that t
 
 # TOP 
 ![Alt text](img/top.png)
++ Here’s how to understand this output:
