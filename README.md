@@ -60,3 +60,30 @@ Identifying potential problems:
 
 # VMSTAT
 ![Alt text](img/vmstat.png)
+
+vmstat is a command-line tool for Linux/Unix systems that provides real-time system monitoring and performance analysis. It displays a variety of system statistics, including CPU usage, memory usage, disk I/O, and more. vmstat is a free and open-source tool that is commonly used by system administrators and developers to identify performance issues and optimize system resources.
+
+Here’s how to understand this output:
+
+When you run vmstat, it displays a variety of statistics that can be used to monitor system performance. The output is organized in columns, and each column represents a specific system metric. Some of the most commonly used columns include:
+
++ r: This column shows the number of processes that are currently waiting for CPU resources.
++ b: This column shows the number of processes that are currently blocked and waiting for I/O resources.
++ us: This column shows the percentage of CPU resources currently being used by user-level processes.
++ sy: This column shows the percentage of CPU resources currently being used by system-level processes.
++ id: This column shows the percentage of CPU resources that are currently idle.
++ wa: This column shows the percentage of CPU resources that are currently being used for I/O operations.
++ si: This column shows the amount of memory that is being swapped in from disk.
++ so: This column shows the amount of memory that is being swapped out to disk.
++ bi: This column shows the amount of data that is being read from disk.
++ bo: This column shows the amount of data that is being written to disk.
+
+vmstat also provides several color-coded indicators that can help you quickly identify processes that are consuming high amounts of resources. For example, processes that are using a lot of CPU resources will be highlighted in red, while processes that are using a lot of memory will be highlighted in blue.
+
+Identifying potential problems:
+
+ + High CPU usage: If you notice that the us or sy columns are consistently showing a high percentage of CPU usage, it may indicate that there is a performance issue that needs to be addressed. You can use vmstat to identify the specific processes that are causing the issue and take appropriate action to optimize or terminate them.
+
++ High I/O wait times: If you notice that the wa column is consistently showing a high percentage of CPU usage, it may indicate that there is a problem with disk I/O performance. You can use vmstat to identify the specific processes that are causing the issue and take appropriate action to optimize or terminate them.
+
++ Memory issues: If you notice that the si or so columns are consistently showing a high amount of memory being swapped in or out from disk, it may indicate that there is a memory issue that needs to be addressed. You can use vmstat to identify the specific processes that are causing the issue and take appropriate action to optimize or terminate them.
