@@ -35,4 +35,26 @@ Identifying potential problems:
 # HTOP
 ![Alt text](img/htop.png)
 
+htop is a command-line process monitoring tool for Linux/Unix systems. It is a more advanced version of the top command, which provides real-time system monitoring by displaying a list of processes and their resource usage statistics. htop is a free and open-source tool that provides a more user-friendly and interactive interface than the traditional top command.
+
 Here’s how to understand this output:
+
+When you run htop, it displays a list of processes that are currently running on your system. The output is organized in columns, and each column represents a specific resource usage metric. Some of the most commonly used columns include:
+
++ PID: This column shows the process ID number of each running process.
++ USER: This column shows the username of the user who initiated the process.
++ CPU%: This column shows the percentage of CPU resources currently being used by each process.
++ MEM%: This column shows the percentage of memory resources currently being used by each process.
++ VIRT: This column shows the virtual memory usage of each process.
++ RES: This column shows the physical memory usage of each process.
++ TIME+: This column shows the total CPU time consumed by each process.
++ COMMAND: This column shows the name of the command that is currently being executed.
+
+htop also provides several color-coded indicators that can help you quickly identify processes that are consuming high amounts of resources. For example, processes that are using a lot of CPU resources will be highlighted in red, while processes that are using a lot of memory will be highlighted in blue.
+
+Identifying potential problems:
+
++ High CPU usage: If you notice that a particular process or multiple processes are consistently using a high percentage of CPU resources, it may indicate that there is a performance issue that needs to be addressed. You can use htop to identify the specific process or processes that are causing the issue and take appropriate action to optimize or terminate them.
++ High memory usage: If you notice that a particular process or multiple processes are consistently using a high percentage of memory resources, it may indicate that there is a memory leak or other performance issue that needs to be addressed. You can use htop to identify the specific process or processes that are causing the issue and take appropriate action to optimize or terminate them.
++ Processes in a state of deadlock or waiting: If you notice that a particular process or multiple processes are stuck in a state of deadlock or waiting, it may indicate that there is a problem with the system configuration or application code. You can use htop to identify the specific process or processes that are stuck and take appropriate action to resolve the issue.
+
