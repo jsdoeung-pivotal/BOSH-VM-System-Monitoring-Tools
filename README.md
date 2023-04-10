@@ -32,3 +32,7 @@ Identifying potential problems:
 + Low memory: If the system is consistently running low on memory, it may lead to slow performance and even system crashes. It may be necessary to free up memory or add additional memory to the system.
 + Non-responsive processes: If a process is in a non-responsive or zombie state, it may indicate a problem with the system or the process itself. It may be necessary to investigate the cause of the issue and take steps to fix it.
 
+# HTOP
+![Alt text](img/htop.png)
+
+Here’s how to understand this output:
