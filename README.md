@@ -50,7 +50,9 @@ When you run htop, it displays a list of processes that are currently running on
 + TIME+: This column shows the total CPU time consumed by each process.
 + COMMAND: This column shows the name of the command that is currently being executed.
 
-htop also provides several color-coded indicators that can help you quickly identify processes that are consuming high amounts of resources. For example, processes that are using a lot of CPU resources will be highlighted in red, while processes that are using a lot of memory will be highlighted in blue.
+htop also provides several color-coded indicators that can help you quickly identify processes that are consuming high amounts of resources. 
+
+![Alt text](img/htop color bar.png)
 
 Identifying potential problems:
 
