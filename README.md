@@ -52,7 +52,7 @@ When you run htop, it displays a list of processes that are currently running on
 
 htop also provides several color-coded indicators that can help you quickly identify processes that are consuming high amounts of resources. 
 
-![Alt text](img/htop color bar.png)
+![Alt text](img/htop_color_bar.png)
 
 Identifying potential problems:
 
