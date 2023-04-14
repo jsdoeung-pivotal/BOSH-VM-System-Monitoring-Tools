@@ -131,7 +131,7 @@ Here’s how to understand this output:
 + %memused: The percentage of memory used.
 + kbbuffers: The amount of memory used for buffers in kilobytes.
 + kbcached: The amount of memory used for caching file data in kilobytes.
-+ kbcommit: The amount of memory in kilobytes needed for current workload. This is an estimate of how much RAM/swap is needed to guarantee that there never is out of memory.
++ kbcommit: The amount of memory in kilobytes needed for current workload. This is an estimate of how much RAM/swap is needed to guarantee that we're never out of memory.
 + %commit: A percentage of memory needed for current workload in relation to the total amount of memory (RAM+swap). This number may be greater than 100% because the kernel usually overcommits memory.
 + kbactive: Amount of active memory in kilobytes (memory that has been used more recently and usually not reclaimed unless absolutely necessary).
 + kbinact: Amount of inactive memory in kilobytes (memory which has been less recently used. It is more eligible to be reclaimed for other purposes).
