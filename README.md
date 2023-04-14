@@ -35,7 +35,7 @@ Identifying potential problems:
 # HTOP
 ![Alt text](img/htop.png)
 
-htop is a command-line process monitoring tool for Linux/Unix systems. It is a more advanced version of the top command, which provides real-time system monitoring by displaying a list of processes and their resource usage statistics. htop is a free and open-source tool that provides a more user-friendly and interactive interface than the traditional top command.
+htop is a command-line process monitoring tool and is a more advanced version of the top command, which provides real-time system monitoring by displaying a list of processes and their resource usage statistics. htop provides a more user-friendly and interactive interface than the top command.
 
 Here’s how to understand this output:
 
