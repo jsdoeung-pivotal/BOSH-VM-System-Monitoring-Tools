@@ -1,6 +1,6 @@
 # BOSH-VM-System-Monitoring-Tools
 
-BOSH Director is a very resource-intensive application. We need to ensure that the system running BOSH Director has sufficient resources for things like CPU, memory, disk, and network bandwidth. If you are experiencing performance issues with the BOSH Director, there are out-of-the-box system monitoring tools like top, htop, vmstat and iostat that monitor the resource utilization on the system and can help narrow down where the performance issue is coming from. We will talk briefly about each of these tools to understand its output and what it means.
+BOSH Director is a very resource-intensive application. We need to ensure that the system running BOSH Director has sufficient resources for things like CPU, memory, disk, and network bandwidth. If you are experiencing performance issues with the BOSH Director, there are out-of-the-box system monitoring tools like top, htop, vmstat, iostat and SAR that monitor the resource utilization on the system and can help narrow down where the performance issue is coming from. We will talk briefly about each of these tools to understand its output and what it means.
 
 # TOP 
 ![Alt text](img/top.png)
@@ -115,4 +115,34 @@ Disk bottlenecks: If you notice that a specific device is consistently experienc
 Slow I/O performance: If you notice that the tps column is consistently showing a low number of I/O transactions per second, it may indicate that there is a problem with I/O performance. You can use iostat to identify the specific device that is causing the issue and take appropriate action to optimize or replace it.
 
 I/O errors: If you notice that the iostat output is showing a high number of I/O errors, it may indicate that there is a problem with the device or the file system. You can use iostat to identify the specific device that is causing the issue and take appropriate action to troubleshoot and resolve the errors.
+
+# SAR
+![Alt text](img/sar.png)
+
+The System Activity Reporter (SAR) command is a powerful tool that can be used to monitor system performance and identify bottlenecks. It is available on most Unix-based systems, including Linux, Solaris, and AIX. SAR collects performance data at specified intervals and stores it in log files that can be used for analysis. The SAR command can be used to monitor a variety of system resources, including CPU usage, memory usage, disk I/O, and network activity. We will focus on the SAR -r command that can be used to monitor memory consumption.
+
+Here’s how to understand this output:
+
++ kbmemfree: The amount of free memory in kilobytes.
++ kbmemused: The amount of used memory in kilobytes.
++ %memused: The percentage of memory used.
++ kbbuffers: The amount of memory used for buffers in kilobytes.
++ kbcached: The amount of memory used for caching file data in kilobytes.
++ kbswpfree: The amount of free swap space in kilobytes.
++ kbswpused: The amount of used swap space in kilobytes.
++ %swpused: The percentage of swap space used.
++ kbswpcad: The amount of cached swap space in kilobytes.
+
+Identifying potential problems:
+
+One of the most common problems that can be identified using the SAR -r command is high memory usage. You can spot high memory usage by checking the "%memused" column in the output. If the percentage of memory used is consistently high (over 90-95%), it may indicate that the system is running out of memory and is possibly experiencing memory pressure.
+
++ Identifying Memory Leaks:
+Memory leaks occur when a program allocates memory but fails to release it back to the system, causing memory usage to continuously grow over time. You can spot memory leaks by monitoring the "kbmemused" column in the SAR -r output over time. If the amount of memory used continuously increases over time, it may indicate a memory leak.
+
++ Identifying Swapping Activity:
+When a system runs out of physical memory, it may start using the swap space on the hard disk as a temporary storage area. However, swapping can significantly slow down the system. You can spot swapping activity by monitoring the "kbswpused" and "%swpused" columns in the SAR -r output. If the amount of swap space used is consistently high (over 50-60%) or if the percentage of swap space used is consistently increasing over time, it may indicate that the system is experiencing memory pressure and is swapping heavily.
+
++ Identifying Page Faults:
+Page faults occur when a program attempts to access memory that is not currently in physical memory and must be fetched from the hard disk. This can cause significant delays in program execution. You can spot page faults by monitoring the "pgfault/s" column in the SAR -r output. If the number of page faults per second is consistently high, it may indicate that the system is experiencing memory pressure and is continuously paging in memory from the hard disk.
 
