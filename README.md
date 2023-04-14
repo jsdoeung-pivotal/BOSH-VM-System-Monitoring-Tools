@@ -87,3 +87,32 @@ Identifying potential problems:
 + High I/O wait times: If you notice that the wa column is consistently showing a high percentage of CPU usage, it may indicate that there is a problem with disk I/O performance. You can use vmstat to identify the specific processes that are causing the issue and take appropriate action to optimize or terminate them.
 
 + Memory issues: If you notice that the si or so columns are consistently showing a high amount of memory being swapped in or out from disk, it may indicate that there is a memory issue that needs to be addressed. You can use vmstat to identify the specific processes that are causing the issue and take appropriate action to optimize or terminate them.
+
+# IOSTAT
+![Alt text](img/iostat.png)
+
+iostat is a command-line tool that provides real-time system monitoring and performance analysis for input/output (I/O) operations in Linux/Unix systems. It can help you identify I/O bottlenecks, disk usage, and other performance issues. iostat is a free and open-source tool that is commonly used by system administrators and developers to optimize system resources.
+
+Here’s how to understand this output:
+
+When you run iostat, it displays a variety of statistics that can be used to monitor I/O performance. The output is organized in columns, and each column represents a specific system metric. Some of the most commonly used columns include:
+
++ Device: This column displays the name of the device being monitored.
++ tps: This column displays the number of I/O transactions per second.
++ kB_read/s: This column displays the amount of data read from the device in kilobytes per second.
++ kB_wrtn/s: This column displays the amount of data written to the device in kilobytes per second.
++ kB_read: This column displays the total amount of data read from the device since the system was last booted.
++ kB_wrtn: This column displays the total amount of data written to the device since the system was last booted.
+
+iostat also provides several color-coded indicators that can help you quickly identify devices that are experiencing high levels of I/O activity. For example, devices that are experiencing high levels of I/O activity will be highlighted in red, while devices that are not experiencing much I/O activity will be highlighted in green.
+
+Identifying potential problems:
+
+iostat can be a valuable tool for identifying I/O performance issues and troubleshooting problems. Some of the most common issues that can be spotted using iostat include:
+
+Disk bottlenecks: If you notice that a specific device is consistently experiencing high levels of I/O activity, it may indicate that there is a disk bottleneck that needs to be addressed. You can use iostat to identify the specific device that is causing the issue and take appropriate action to optimize or replace it.
+
+Slow I/O performance: If you notice that the tps column is consistently showing a low number of I/O transactions per second, it may indicate that there is a problem with I/O performance. You can use iostat to identify the specific device that is causing the issue and take appropriate action to optimize or replace it.
+
+I/O errors: If you notice that the iostat output is showing a high number of I/O errors, it may indicate that there is a problem with the device or the file system. You can use iostat to identify the specific device that is causing the issue and take appropriate action to troubleshoot and resolve the errors.
+
