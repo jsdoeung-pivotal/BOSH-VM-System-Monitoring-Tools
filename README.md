@@ -121,19 +121,21 @@ Identifying potential problems:
 # SAR
 ![Alt text](img/sar.png)
 
-The System Activity Reporter (SAR) command is a powerful tool that can be used to monitor system performance and identify bottlenecks. It is available on most Unix-based systems, including Linux, Solaris, and AIX. SAR collects performance data at specified intervals and stores it in log files that can be used for analysis. The SAR command can be used to monitor a variety of system resources, including CPU usage, memory usage, disk I/O, and network activity. We will focus on the SAR -r command that can be used to monitor memory consumption.
+The sar command also known as "System Activity Reporter" is a powerful tool that can be used to monitor system performance and identify bottlenecks. SAR collects performance data at specified intervals and stores it in log files that can be used for analysis. The SAR command can be used to monitor a variety of system resources, including CPU usage, memory usage, disk I/O, and network activity. We will focus on the SAR -r command which monitors memory utilization. Feel free to explore other useful sar command flags like "sar -u" which will give you stats for cpu utilization. sar uses /proc filesystem for gathering information.
 
 Here’s how to understand this output:
 
 + kbmemfree: The amount of free memory in kilobytes.
 + kbmemused: The amount of used memory in kilobytes.
++ kbavail: An estimate of how much memory in kilobytes is available for starting new applications, without swapping.
 + %memused: The percentage of memory used.
 + kbbuffers: The amount of memory used for buffers in kilobytes.
 + kbcached: The amount of memory used for caching file data in kilobytes.
-+ kbswpfree: The amount of free swap space in kilobytes.
-+ kbswpused: The amount of used swap space in kilobytes.
-+ %swpused: The percentage of swap space used.
-+ kbswpcad: The amount of cached swap space in kilobytes.
++ kbcommit: The amount of memory in kilobytes needed for current workload. This is an estimate of how much RAM/swap is needed to guarantee that there never is out of memory.
++ %commit: A percentage of memory needed for current workload in relation to the total amount of memory (RAM+swap). This number may be greater than 100% because the kernel usually overcommits memory.
++ kbactive: Amount of active memory in kilobytes (memory that has been used more recently and usually not reclaimed unless absolutely necessary).
++ kbinact: Amount of inactive memory in kilobytes (memory which has been less recently used. It is more eligible to be reclaimed for other purposes).
++ kbdirty: Amount of memory in kilobytes waiting to get written back to the disk.
 
 Identifying potential problems:
 
