@@ -78,8 +78,6 @@ When you run vmstat, it displays a variety of statistics that can be used to mon
 + bi: This column shows the amount of data that is being read from disk.
 + bo: This column shows the amount of data that is being written to disk.
 
-vmstat also provides several color-coded indicators that can help you quickly identify processes that are consuming high amounts of resources. For example, processes that are using a lot of CPU resources will be highlighted in red, while processes that are using a lot of memory will be highlighted in blue.
-
 Identifying potential problems:
 
  + High CPU usage: If you notice that the us or sy columns are consistently showing a high percentage of CPU usage, it may indicate that there is a performance issue that needs to be addressed. You can use vmstat to identify the specific processes that are causing the issue and take appropriate action to optimize or terminate them.
