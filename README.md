@@ -50,7 +50,7 @@ When you run htop, it displays a list of processes that are currently running on
 + TIME+: This column shows the total CPU time consumed by each process.
 + COMMAND: This column shows the name of the command that is currently being executed.
 
-htop also provides several color-coded indicators that can be helpful. The screenshot below will give you an idea of what each color will mean for the CPU, Memory and Swap bar.
+htop also provides several color-coded indicators that can be helpful. The screenshot below will give you the color code and what it defines under the CPU, Memory and Swap bar.
 
 ![Alt text](img/htop_color_bar.png)
 
