@@ -91,7 +91,7 @@ Identifying potential problems:
 # IOSTAT
 ![Alt text](img/iostat.png)
 
-iostat is a command-line tool that provides real-time system monitoring and performance analysis for input/output (I/O) operations in Linux/Unix systems. It can help you identify I/O bottlenecks, disk usage, and other performance issues. iostat is a free and open-source tool that is commonly used by system administrators and developers to optimize system resources.
+iostat can help you identify I/O bottlenecks, disk usage, and other performance issues. 
 
 Here’s how to understand this output:
 
