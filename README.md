@@ -95,26 +95,28 @@ iostat can help you identify I/O bottlenecks, disk usage, and other performance 
 
 Here’s how to understand this output:
 
-When you run iostat, it displays a variety of statistics that can be used to monitor I/O performance. The output is organized in columns, and each column represents a specific system metric. Some of the most commonly used columns include:
+When you run iostat, it displays a variety of statistics that can be used to monitor I/O performance. The output is organized in columns, and each column represents a specific system metric. You'll find the more commonly used columns below:
 
 + Device: This column displays the name of the device being monitored.
++ %user and %system: These columns show the percentage of CPU time spent executing user-level code and kernel-level code.
++ %iowait: This column shows the percentage of time that the CPU is idle and waiting for I/O operations to complete. 
++ %steal: This column displays the percentage of CPU time that is being "stolen" by the hypervisor if the system is running in a virtualized environment.
++ %idle: This column displays the percentage of time that the CPU is idle and not executing any tasks.
 + tps: This column displays the number of I/O transactions per second.
 + kB_read/s: This column displays the amount of data read from the device in kilobytes per second.
 + kB_wrtn/s: This column displays the amount of data written to the device in kilobytes per second.
++ kB_dscd/s: This column displays the average number of kilobytes of data that's discarded by the kernel per second.
 + kB_read: This column displays the total amount of data read from the device since the system was last booted.
 + kB_wrtn: This column displays the total amount of data written to the device since the system was last booted.
 
-iostat also provides several color-coded indicators that can help you quickly identify devices that are experiencing high levels of I/O activity. For example, devices that are experiencing high levels of I/O activity will be highlighted in red, while devices that are not experiencing much I/O activity will be highlighted in green.
-
 Identifying potential problems:
 
-iostat can be a valuable tool for identifying I/O performance issues and troubleshooting problems. Some of the most common issues that can be spotted using iostat include:
-
-Disk bottlenecks: If you notice that a specific device is consistently experiencing high levels of I/O activity, it may indicate that there is a disk bottleneck that needs to be addressed. You can use iostat to identify the specific device that is causing the issue and take appropriate action to optimize or replace it.
-
-Slow I/O performance: If you notice that the tps column is consistently showing a low number of I/O transactions per second, it may indicate that there is a problem with I/O performance. You can use iostat to identify the specific device that is causing the issue and take appropriate action to optimize or replace it.
-
-I/O errors: If you notice that the iostat output is showing a high number of I/O errors, it may indicate that there is a problem with the device or the file system. You can use iostat to identify the specific device that is causing the issue and take appropriate action to troubleshoot and resolve the errors.
++ If the %user or %system values are consistently high, it could indicate that the CPU is struggling to keep up with demand.
++ If the %iowait value is consistently high, it could indicate that the system is spending a lot of time waiting for I/O operations to complete.
++ If the %steal value is consistently high, it could indicate that the virtual machine is not receiving its fair share of resources and that other virtual machines on the same physical host are consuming a disproportionate amount of resources. This can lead to poor performance of the virtual machine and the applications running on it.
++ If the tps value is consistently high, it could indicate that there are too many I/O operations occurring at once, leading to poor performance.
++ If the kB_read/s and kB_wrtn/s values are consistently low, it could indicate that the disk is not performing as well as it should be.
++ If the kB_dscd/s value is consistently high, it may indicate that the system is experiencing disk I/O bottlenecks or that the disk is unable to keep up with the amount of data being written to it.
 
 # SAR
 ![Alt text](img/sar.png)
