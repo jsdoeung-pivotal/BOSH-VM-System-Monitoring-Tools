@@ -63,7 +63,7 @@ Identifying potential problems:
 # VMSTAT
 ![Alt text](img/vmstat.png)
 
-vmstat is a command-line tool for Linux/Unix systems that provides real-time system monitoring and performance analysis. It displays a variety of system statistics, including CPU usage, memory usage, disk I/O, and more. vmstat is a free and open-source tool that is commonly used by system administrators and developers to identify performance issues and optimize system resources.
+vmstat provides real-time system monitoring and performance analysis. It displays a variety of system statistics, including CPU usage, memory usage, disk I/O, and more. 
 
 Here’s how to understand this output:
 
