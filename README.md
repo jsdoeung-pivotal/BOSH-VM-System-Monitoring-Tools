@@ -121,7 +121,7 @@ Identifying potential problems:
 # SAR
 ![Alt text](img/sar.png)
 
-The sar command also known as "System Activity Reporter" is a powerful tool that can be used to monitor system performance and identify bottlenecks. SAR collects performance data at specified intervals and stores it in log files that can be used for analysis. The SAR command can be used to monitor a variety of system resources, including CPU usage, memory usage, disk I/O, and network activity. We will focus on the SAR -r command which monitors memory utilization. Feel free to explore other useful sar command flags like "sar -u" which will give you stats for cpu utilization. sar uses /proc filesystem for gathering information.
+The sar command also known as "System Activity Reporter" is a powerful tool that can be used to monitor system performance and identify bottlenecks. SAR collects performance data at specified intervals and stores it in log files that can be used for analysis. The SAR command can be used to monitor a variety of system resources, including CPU usage, memory usage, disk I/O, and network activity. We will focus on the SAR -r command which monitors memory utilization. Feel free to explore other useful sar command flags like the "-u" flag which will give you stats for cpu utilization. sar uses /proc filesystem for gathering information.
 
 Here’s how to understand this output:
 
