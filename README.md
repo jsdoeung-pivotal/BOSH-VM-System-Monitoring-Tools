@@ -80,11 +80,11 @@ When you run vmstat, it displays a variety of statistics that can be used to mon
 
 Identifying potential problems:
 
- + High CPU usage: If you notice that the us or sy columns are consistently showing a high percentage of CPU usage, it may indicate that there is a performance issue that needs to be addressed. You can use vmstat to identify the specific processes that are causing the issue and take appropriate action to optimize or terminate them.
+ + High CPU usage: If you notice that the us or sy columns are consistently showing a high percentage of CPU usage, it may indicate that there is a performance issue that needs to be addressed. 
 
-+ High I/O wait times: If you notice that the wa column is consistently showing a high percentage of CPU usage, it may indicate that there is a problem with disk I/O performance. You can use vmstat to identify the specific processes that are causing the issue and take appropriate action to optimize or terminate them.
++ High I/O wait times: If you notice that the wa column is consistently showing a high percentage of CPU usage, it may indicate that there is a problem with disk I/O performance. 
 
-+ Memory issues: If you notice that the si or so columns are consistently showing a high amount of memory being swapped in or out from disk, it may indicate that there is a memory issue that needs to be addressed. You can use vmstat to identify the specific processes that are causing the issue and take appropriate action to optimize or terminate them.
++ Memory issues: If you notice that the si or so columns are consistently showing a high amount of memory being swapped in or out from disk, it may indicate that there is a memory issue that needs to be addressed. 
 
 # IOSTAT
 ![Alt text](img/iostat.png)
