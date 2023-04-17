@@ -147,6 +147,5 @@ Memory leaks occur when a program allocates memory but fails to release it back 
 + Identifying Swapping Activity:
 When a system runs out of physical memory, it may start using the swap space on the hard disk as a temporary storage area. However, swapping can significantly slow down the system. You can spot swapping activity by monitoring the "kbswpused" and "%swpused" columns in the SAR -r output. If the amount of swap space used is consistently high (over 50-60%) or if the percentage of swap space used is consistently increasing over time, it may indicate that the system is experiencing memory pressure and is swapping heavily.
 
-+ Identifying Page Faults:
-Page faults occur when a program attempts to access memory that is not currently in physical memory and must be fetched from the hard disk. This can cause significant delays in program execution. You can spot page faults by monitoring the "pgfault/s" column in the SAR -r output. If the number of page faults per second is consistently high, it may indicate that the system is experiencing memory pressure and is continuously paging in memory from the hard disk.
+
 
